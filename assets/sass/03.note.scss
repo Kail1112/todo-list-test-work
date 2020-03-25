@@ -1,0 +1,38 @@
+@import "00.vars";
+.note {
+  display: block;
+  width: 100%;
+  //background-color: $color-gray;
+  box-shadow: 0 0 (6px / $font-size * 1em) 0 rgba(0, 0, 0, 0.15);
+  padding: 15px / $font-size * 1em
+}
+.note-top {
+  display: block;
+  width: 100%;
+  h2 {
+    width: 100%;
+    font-weight: 400;
+  }
+  &:not(:last-child) {
+    margin-bottom: 20px / $font-size * 1em;
+  }
+}
+.note-middle {
+  display: block;
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 20px / $font-size * 1em;
+  }
+}
+.note-bottom {
+  display: block;
+  width: 100%;
+  .row {
+    margin: -5px / $font-size * 1em;
+    *[class*="col-"] {
+      padding: 5px / $font-size * 1em;
+    }
+  }
+}
+
+@import "03.note.add";

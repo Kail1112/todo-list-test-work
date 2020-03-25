@@ -1,0 +1,60 @@
+@import "00.vars";
+.note-add {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 15px / $font-size * 1em;
+  box-shadow: 0 0 (6px / $font-size * 1em) 0 rgba(0, 0, 0, 0.15);
+  &.full {
+    width: 100%;
+  }
+}
+.note-add-list__top {
+  display: block;
+  width: 100%;
+  h4 {
+    font-weight: 600;
+  }
+  &:not(:last-child) {
+    margin-bottom: 15px / $font-size * 1em
+  }
+}
+.note-add-list {
+  display: block;
+  width: 100%;
+  max-height: 200px / $font-size * 1em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 15px / $font-size * 1em;
+  padding-bottom: 15px / $font-size * 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  ul {
+    width: 100%;
+    li {
+      display: block;
+      width: 100%;
+      list-style: none;
+      font-size: 14px / $font-size * 1em;
+      line-height: 18px / 14px * 1em;
+      .row {
+        align-items: center;
+      }
+      &:not(:last-child) {
+        margin-bottom: 5px / 14px * 1em;
+      }
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 15px / $font-size * 1em
+  }
+}
+.note-add-list__bottom {
+  display: block;
+  width: 100%;
+  padding-bottom: 15px / $font-size * 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  &:not(:last-child) {
+    margin-bottom: 15px / $font-size * 1em
+  }
+}

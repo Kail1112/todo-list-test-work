@@ -1,0 +1,20 @@
+@import "00.vars";
+.todo {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+.todo-item {
+  display: block;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  font-size: 14px / $font-size * 1em;
+  line-height: 20px / 14px * 1em;
+  &.checked {
+    text-decoration: line-through;
+  }
+  &:not(:last-child) {
+    margin-bottom: 5px / 14px * 1em;
+  }
+}

@@ -1,0 +1,169 @@
+@import "00.vars";
+
+main {
+  display: block;
+  width: 100%;
+  padding: (30px / $font-size * 1em) 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body, html, textarea, button, input {
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+p, ul, ol {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  &:not(:last-child) {
+    margin-bottom: 15px / $font-size * 1rem;
+  }
+}
+
+ul, ol {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  &:hover, &:visited {
+    color: $color-normal;
+  }
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25em;
+  margin: 0 auto;
+  &:not(:last-child) {
+    margin-bottom: 15px / $font-size * 1rem;
+  }
+}
+
+/*
+* Стилизация стандартных элементов
+*/
+.btn {
+  display: inline-block;
+  max-width: 100%;
+  background-color: $color-main;
+  font-size: 14px / $font-size * 1em;
+  padding: (8px / 14px * 1em) (15px / 14px * 1em);
+  border: 1px solid $color-main;
+  border-radius: 3px / 14px * 1em;
+  color: #fff;
+  transition: color .2s linear, background-color .2s linear;
+  text-align: center;
+  &.full {
+    width: 100%;
+  }
+  &:hover {
+    background-color: transparent;
+    color: $color-main
+  }
+  &.error {
+    background-color: $color-red;
+    border-color: $color-red;
+    &:hover {
+      background-color: transparent;
+      color: $color-red
+    }
+  }
+}
+
+.label-input {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  &:not(:last-child) {
+    margin-bottom: 10px / $font-size * 1em;
+  }
+}
+
+.label-input__signature {
+  display: block;
+  width: 100%;
+  font-size: 12px / $font-size * 1em;
+  line-height: 18px / 12px * 1em;
+  &:not(:last-child) {
+    margin-bottom: 5px / 12px * 1em;
+  }
+}
+
+.input {
+  display: inline-block;
+  max-width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  color: $color-normal;
+  font-size: 14px / $font-size * 1em;
+  padding: (8px / 14px * 1em) (15px / 14px * 1em);
+  border-radius: 3px / 14px * 1em;
+  transition: border-color .2s linear, color .2s linear;
+  outline: none;
+  &.full {
+    width: 100%;
+  }
+  &:focus {
+    border-color: $color-main;
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: $color-normal
+    }
+    &::-moz-placeholder {
+      color: $color-normal
+    }
+    &:-ms-input-placeholder {
+      color: $color-normal
+    }
+    &:-moz-placeholder {
+      color: $color-normal
+    }
+  }
+  &::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    transition: color .2s linear;
+  }
+  &::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    transition: color .2s linear;
+  }
+  &:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    transition: color .2s linear;
+  }
+  &:-moz-placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    transition: color .2s linear;
+  }
+}
+
+.title-page {
+  display: block;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  padding-left: 88px / $font-size * 1em;
+  h1 {
+    width: 100%;
+    font-weight: 400;
+  }
+}
+.go-back {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

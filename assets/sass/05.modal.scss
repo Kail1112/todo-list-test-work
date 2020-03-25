@@ -1,0 +1,70 @@
+@import "00.vars";
+.modal {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  visibility: hidden;
+  transform: translateY(-100%);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling:touch;
+  z-index: 999;
+  transition: visibility .35s , transform .35s , background-color 1.05s;
+}
+.modal.openModal {
+  background-color: rgba(0,0,0,0.6);
+  visibility: visible;
+  transform: translateY(0);
+}
+.modal-container {
+  display: block;
+
+  width: 100%;
+  max-width: 320px / $font-size * 1em;
+  margin: 0 auto;
+  background: #fff;
+  opacity: 0;
+  transition: opacity .5s , transform .5s;
+
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.modal.openModal .modal-container {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-head {
+  display: block;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  padding: 15px / $font-size * 1em;
+  margin-bottom: 15px / $font-size * 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25)
+}
+.modal-head p {
+  display: block;
+  width: 100%;
+  font-size: 18px / $font-size * 1em;
+  line-height: 1.5em;
+  color: #000000;
+}
+
+.modal-body {
+  position: relative;
+  width: 100%;
+  padding: 15px / $font-size * 1em;
+}

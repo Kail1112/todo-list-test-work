@@ -1,0 +1,40 @@
+{
+  "name": "todo-list-test-work",
+  "version": "1.0.0",
+  "description": "Тестовое задание",
+  "author": "Kail1112",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env AUTOPREFIXER_FLEXBOX=true BROWSERSLIST=\">0.2%\" nuxt",
+    "build": "cross-env AUTOPREFIXER_FLEXBOX=true BROWSERSLIST=\">0.2%\" nuxt build",
+    "start": "cross-env AUTOPREFIXER_FLEXBOX=true BROWSERSLIST=\">0.2%\" nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "cross-env": "^7.0.2",
+    "node-sass": "^4.13.1",
+    "nuxt": "^2.0.0",
+    "sass-loader": "^8.0.2"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "vue-jest": "^4.0.0-0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
+  }
+}
